@@ -105,17 +105,17 @@ gen_ifconfig >$WORKDIR/boot_ifconfig.sh
 chmod +x boot_*.sh /etc/rc.local
 
 gen_3proxy >/usr/local/etc/3proxy/3proxy.cfg
-echo "xxx"
+
 cat >>/etc/rc.local <<EOF
 bash ${WORKDIR}/boot_iptables.sh
 bash ${WORKDIR}/boot_ifconfig.sh
 ulimit -n 10048
 service 3proxy start
 EOF
-
+echo "xxx"
 bash /etc/rc.local
-echo "aaa"
+
 gen_proxy_file_for_user
-echo "bbb"
+
 
 upload_proxy

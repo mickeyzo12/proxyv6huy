@@ -112,9 +112,9 @@ bash ${WORKDIR}/boot_ifconfig.sh
 ulimit -n 10048
 service 3proxy start
 EOF
-echo "yyy"
+echo "yyyy"
 bash /etc/rc.local
-echo "zzz"
+echo "zzzz"
 gen_proxy_file_for_user
 
 
